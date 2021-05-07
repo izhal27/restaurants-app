@@ -358,7 +358,9 @@ footer {
 
   .navbar-menu {
     position: relative;
+    left: 0;
     display: flex;
+    justify-content: flex-end;
     height: 100%;
   }
 

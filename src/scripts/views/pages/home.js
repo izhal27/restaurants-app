@@ -15,9 +15,6 @@ const ListRestaurants = {
       <section id="restaurants" class="container" aria-label="List of Restaurants">
         <article id="restaurants-container">
         </article>
-        <div class="cta">
-          <a href="#/restaurants">Go to list All of Restaurants</a>
-        </div>
       </section>
     `;
   },
