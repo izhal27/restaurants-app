@@ -74,7 +74,7 @@ const createLikeButtonTemplate = () => `
 
 const createLikedButtonTemplate = () => `
   <button aria-label="unlike this Restaurant" id="likedButton" class="like">
-    <i class="fa fa-heart" aria-hidden="true"></i> Favorite
+    <i class="fa fa-heart" aria-hidden="true"></i> Dalam daftar Favorite
   </button>
 `;
 
