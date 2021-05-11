@@ -23,7 +23,7 @@ body {
   top: -40px;
   left: 0;
   background-color: #8f3985;
-  color: #efd9ce;
+  color: #fff;
   padding: 8px;
   z-index: 100;
   text-decoration: none;
@@ -36,7 +36,7 @@ body {
 
 nav {
   background-color: #059669;
-  color: #efd9ce;
+  color: #fff;
   width: 100%;
 }
 
@@ -90,7 +90,7 @@ nav {
 }
 
 .navbar-menu-item:hover {
-  background-color: #efd9ce;
+  background-color: #fff;
 }
 
 .navbar-menu-item:hover a {
@@ -221,7 +221,7 @@ nav {
   background-color: #25283d;
   padding: 0.5em;
   font-weight: 700;
-  color: #efd9ce;
+  color: #fff;
   width: 100%;
   margin: 0 auto;
   border-radius: 25px;
@@ -245,7 +245,7 @@ footer {
   font-size: 1.2em;
   padding: 1em;
   text-align: center;
-  color: #efd9ce;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -314,7 +314,7 @@ footer {
 }
 
 .review-date {
-  color: gray;
+  color: rgb(44, 44, 44);
   font-weight: 300;
 }
 
