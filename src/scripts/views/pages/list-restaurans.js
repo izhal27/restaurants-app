@@ -16,12 +16,12 @@ const ListRestaurants = {
 
   async afterRender() {
     const restaurantsContainer = document.querySelector(
-      '#restaurants-container',
+      '#restaurants-container'
     );
     const spinner = document.querySelector('#spinner');
     const restaurants = await RestaurantDb.listRestaurants();
     const renderedRestaurant = restaurants
-      .map((restaurant) => createRestaurantItemTemplate(restaurant))
+      .map(restaurant => createRestaurantItemTemplate(restaurant))
       .join('');
     restaurantsContainer.innerHTML = renderedRestaurant;
     spinner.classList.toggle('show');

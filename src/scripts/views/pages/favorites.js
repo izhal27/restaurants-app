@@ -18,7 +18,7 @@ const Favorites = {
     const restaurants = await FavoritesIdb.getAllRestaurants();
 
     const renderedRestaurant = restaurants
-      .map((restaurant) => createRestaurantItemTemplate(restaurant))
+      .map(restaurant => createRestaurantItemTemplate(restaurant))
       .join('');
     favoritesContainer.innerHTML = renderedRestaurant;
   },

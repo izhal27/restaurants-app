@@ -6,8 +6,8 @@ const createRestaurantDetailTemplate = restaurant => `
   <h2 class="restaurant-detail-title">${restaurant.name}</h2>
   <div>
     <img class="restaurant-picture" src="${API_ENDPOINT.IMAGE_MEDIUM(
-    restaurant.pictureId,
-  )}" alt="${restaurant.name}" />
+      restaurant.pictureId
+    )}" alt="${restaurant.name}" />
     <div id="likeButtonContainer"></div>
     </div>
   </div>
@@ -24,11 +24,11 @@ const createRestaurantDetailTemplate = restaurant => `
     <h4>Menus</h4>
     <ul class="menus">
       <li><span class="menu-sub-title">Foods:</span> ${restaurant.menus.foods
-    .map(food => food.name)
-    .join(', ')}</li>
+        .map(food => food.name)
+        .join(', ')}</li>
       <li><span class="menu-sub-title">Drinks:</span> ${restaurant.menus.drinks
-    .map(drink => drink.name)
-    .join(', ')}</li>
+        .map(drink => drink.name)
+        .join(', ')}</li>
     </ul>
     <div class="description">
       <h4>Description</h4>
@@ -39,13 +39,15 @@ const createRestaurantDetailTemplate = restaurant => `
     <h4>User Reviews</h4>
     <div class="container">
     ${restaurant.customerReviews
-    .map(customerReview => `
+      .map(
+        customerReview => `
         <div class="review">
         <p>${customerReview.review}</p>
         <h6>${customerReview.name}, <span class="review-date">${customerReview.date}</span></h6>
         </div>
-        `)
-    .join('')}
+        `
+      )
+      .join('')}
     </div>
   </div>
   `;

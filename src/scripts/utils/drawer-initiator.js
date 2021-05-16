@@ -1,14 +1,12 @@
 const DrawerInitiator = {
-  init({
-    button, hamburgerIcon, drawer, content,
-  }) {
+  init({ button, hamburgerIcon, drawer, content }) {
     this._hamburgerIcon = hamburgerIcon;
 
-    button.addEventListener('click', (event) => {
+    button.addEventListener('click', event => {
       this._toggleDrawer(event, drawer);
     });
 
-    content.addEventListener('click', (event) => {
+    content.addEventListener('click', event => {
       this._closeDrawer(event, drawer);
     });
   },
@@ -26,7 +24,6 @@ const DrawerInitiator = {
     this._hamburgerIcon.classList.add('fa-bars');
     this._hamburgerIcon.classList.remove('fa-times');
   },
-
 };
 
 export default DrawerInitiator;

@@ -25,12 +25,11 @@ const ListRestaurants = {
   async afterRender() {
     const restaurants = await RestaurantDb.listRestaurants();
     const restaurantsContainer = document.querySelector(
-      '#restaurants-container',
+      '#restaurants-container'
     );
-    restaurants.slice(0, 3).forEach((restaurant) => {
-      restaurantsContainer.innerHTML += createRestaurantItemTemplate(
-        restaurant,
-      );
+    restaurants.slice(0, 3).forEach(restaurant => {
+      restaurantsContainer.innerHTML +=
+        createRestaurantItemTemplate(restaurant);
     });
   },
 };

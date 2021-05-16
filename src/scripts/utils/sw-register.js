@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import runtime from 'serviceworker-webpack-plugin/lib/runtime';
 
 const swRegister = async () => {

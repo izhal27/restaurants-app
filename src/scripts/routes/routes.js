@@ -1,6 +1,4 @@
-import {
-  Home, ListRestaurants, Detail, Favorites,
-} from '../views/pages';
+import { Home, ListRestaurants, Detail, Favorites } from '../views/pages';
 
 const routes = {
   '/': Home,
