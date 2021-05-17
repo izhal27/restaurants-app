@@ -104,10 +104,10 @@ nav {
 .hero-image {
   background-image: linear-gradient(
       0deg,
-      rgba(5, 148, 103, 0.302) 0%,
+      rgba(5, 148, 103, 0.7) 0%,
       rgba(16, 185, 129, 0) 100%
     ),
-    url('/images/heros/hero-image_4.jpg');
+    url('/images/hero-image-small.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -122,13 +122,13 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #ef476f;
   font-size: 1.4em;
 }
 
-.hero-title h3 {
+.hero-title h2 {
   font-size: 0.8em;
-  color: #f3f4f6;
+  color: #ffd166;
 }
 
 .navbar-menu-item a {
@@ -320,7 +320,7 @@ footer {
 
 .like {
   border: none;
-  padding: .9em .8em;
+  padding: 0.9em 0.8em;
   background-color: #ef476f;
   color: #fcfcfc;
   border-radius: 5px;
@@ -400,6 +400,15 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  .hero-image {
+    background-image: linear-gradient(
+        0deg,
+        rgba(5, 148, 103, 0.302) 0%,
+        rgba(16, 185, 129, 0) 100%
+      ),
+      url('/images/hero-image-large.jpg');
+  }
+
   #restaurants-container {
     grid-template-columns: repeat(3, 1fr);
   }

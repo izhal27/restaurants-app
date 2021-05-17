@@ -1,5 +1,11 @@
 import API_ENDPOINT from '../../globals/api-endpoint';
 
+const sanitizeHtml = text => {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+};
+
 const createRestaurantDetailTemplate = restaurant => `
   <div>
   <h2 class="restaurant-detail-title">${restaurant.name}</h2>
@@ -41,8 +47,10 @@ const createRestaurantDetailTemplate = restaurant => `
       .map(
         customerReview => `
         <div class="review">
-        <p>${customerReview.review}</p>
-        <h6>${customerReview.name}, <span class="review-date">${customerReview.date}</span></h6>
+        <p>${sanitizeHtml(customerReview.review)}</p>
+        <h6>${sanitizeHtml(customerReview.name)}, <span class="review-date">${
+          customerReview.date
+        }</span></h6>
         </div>
         `
       )
@@ -54,9 +62,17 @@ const createRestaurantDetailTemplate = restaurant => `
 const createRestaurantItemTemplate = restaurant => `
   <a class="restaurant-item" href="${`/#/detail/${restaurant.id}`}">
     <div class="card roundborder">
-      <img
-      src="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}"
-      alt="restaurant-image" class="card-image roundborder">
+      <picture>
+        <source media="(max-width: 600px)" srcset="${API_ENDPOINT.IMAGE_SMALL(
+          restaurant.pictureId
+        )}">
+        <source media="(max-width: 768px)" srcset="${API_ENDPOINT.IMAGE_MEDIUM(
+          restaurant.pictureId
+        )}">
+        <img src='${API_ENDPOINT.IMAGE_LARGE(
+          restaurant.pictureId
+        )}' alt="restaurant-image" class="lazyload card-image roundborder"></img>
+      </picture>
       <div class="detail-container">
         <h3 class="card-title">${restaurant.name}</h3>
         <h4>City: ${restaurant.city}</h4>

@@ -8,7 +8,7 @@ const ListRestaurants = {
         <div class="hero-image">
           <div class="hero-title">
             <h1>Best Restaurants</h1>
-            <h3>Daftar beberapa restoran yang ada di indonesia</h3>
+            <h2>Daftar beberapa restoran yang ada di indonesia</h2>
           </div>
         </div>
       </div>
