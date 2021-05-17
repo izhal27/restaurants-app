@@ -1,4 +1,3 @@
-/* eslint-disable arrow-parens */
 import API_ENDPOINT from '../../globals/api-endpoint';
 
 const createRestaurantDetailTemplate = restaurant => `
@@ -68,14 +67,14 @@ const createRestaurantItemTemplate = restaurant => `
   </a>
   `;
 
-const createLikeButtonTemplate = () => `
-  <button aria-label="like this Restaurant" id="likeButton" class="like">
+const createLikeRestaurantButtonTemplate = () => `
+  <button aria-label="like this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart-o" aria-hidden="true"></i> Favorite
   </button>
 `;
 
-const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this Restaurant" id="likedButton" class="like">
+const createUnlikeRestaurantButtonTemplate = () => `
+  <button aria-label="unlike this restaurant" id="likedButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i> Dalam daftar Favorite
   </button>
 `;
@@ -83,6 +82,6 @@ const createLikedButtonTemplate = () => `
 export {
   createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createLikeRestaurantButtonTemplate,
+  createUnlikeRestaurantButtonTemplate,
 };

@@ -18,11 +18,15 @@
     "prettier/prettier": [
       "error",
       {
+        "parser": "flow",
         "semi": true,
         "singleQuote": true,
         "tabWidth": 2,
         "useTabs": false,
         "arrowParens": "avoid"
+      },
+      {
+        "usePrettierrc": false
       }
     ],
     "arrow-body-style": "off",
