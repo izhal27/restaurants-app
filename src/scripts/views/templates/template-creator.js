@@ -52,7 +52,7 @@ const createRestaurantDetailTemplate = restaurant => `
   `;
 
 const createRestaurantItemTemplate = restaurant => `
-  <a href="${`/#/detail/${restaurant.id}`}">
+  <a class="restaurant-item" href="${`/#/detail/${restaurant.id}`}">
     <div class="card roundborder">
       <img
       src="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}"
