@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Abel', sans-serif;
+  background-color: #f3f4f6;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #8f3985;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+nav {
+  background-color: #059669;
+  color: #fff;
+  width: 100%;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.navbar-logo a {
+  color: white;
+  text-decoration: none;
+  padding: 0.3em 0.5em;
+}
+
+.hamburger {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  padding: 0.5em 0.7em;
+}
+
+.navbar-menu {
+  color: black;
+  list-style: none;
+  width: 200px;
+  height: 90vh;
+  position: absolute;
+  left: -250px;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+  background-color: #059669;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.open {
+  left: 0;
+}
+
+.navbar-menu-item a {
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  width: 100%;
+}
+
+.navbar-menu-item:hover {
+  background-color: #fff;
+}
+
+.navbar-menu-item:hover a {
+  color: #059669;
+}
+
+.hero-container {
+  height: 90vh;
+}
+
+.hero-image {
+  background-image: linear-gradient(
+      0deg,
+      rgba(5, 148, 103, 0.7) 0%,
+      rgba(16, 185, 129, 0) 100%
+    ),
+    url('/images/hero-image-small.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+}
+
+.hero-title {
+  color: black;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ef476f;
+  font-size: 1.4em;
+}
+
+.hero-title h2 {
+  font-size: 0.8em;
+  color: #ffd166;
+}
+
+.navbar-menu-item a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1em;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+#restaurants-container {
+  margin: 1em 0;
+  width: 100%;
+  min-height: 65vh;
+}
+
+#restaurants-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.restaurants {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: white;
+  margin: 1em 0;
+}
+
+.card {
+  margin-top: 1em;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+}
+
+.card-title {
+  font-size: 1.5em;
+}
+
+.card-title a {
+  color: black;
+}
+
+.card-sub-title {
+  color: #6b7280;
+}
+
+.detail-container {
+  padding: 1em;
+}
+
+.card-description {
+  margin-top: 1em;
+  word-wrap: break-word;
+}
+
+.roundborder {
+  border-radius: 3% 3% 0 0;
+  -webkit-border-radius: 3% 3% 0 0;
+  -moz-border-radius: 3% 3% 0 0;
+  -ms-border-radius: 3% 3% 0 0;
+  -o-border-radius: 3% 3% 0 0;
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.cta {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 1em 0;
+}
+
+.cta a {
+  display: block;
+  text-decoration: none;
+  background-color: #25283d;
+  padding: 0.5em;
+  font-weight: 700;
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.cta a:hover {
+  color: #98dfea;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.page-title {
+  margin: 1em 0;
+}
+
+footer {
+  background-color: #059669;
+  font-size: 1.2em;
+  padding: 1em;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+#spinner {
+  visibility: hidden;
+}
+
+#spinner.show {
+  visibility: visible;
+}
+
+#spinner.hide {
+  visibility: hidden;
+}
+
+.restaurant-detail-container {
+  min-height: 80vh;
+}
+
+.restaurant-detail {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.restaurant-detail-title {
+  font-size: 1.8em;
+}
+
+.restaurant-picture {
+  display: block;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.restaurant-info {
+  line-height: 1.3em;
+}
+
+.restaurant-info h3 {
+  font-size: 1.6em;
+  margin: 0.7em 0;
+}
+
+.menus {
+  margin-left: 2em;
+}
+
+.menu-sub-title {
+  font-weight: bold;
+}
+
+.description {
+  margin-top: 0.8em;
+}
+
+.description p {
+  text-indent: 2em;
+}
+
+.customer-reviews {
+  margin-top: 1em;
+}
+
+.review {
+  margin: 1em 0;
+}
+
+.review-date {
+  color: rgb(44, 44, 44);
+  font-weight: 300;
+}
+
+.like {
+  border: none;
+  padding: 0.9em 0.8em;
+  background-color: #ef476f;
+  color: #fcfcfc;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.like:hover {
+  color: #ffd166;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Tablet and Dekstop */
+
+@media only screen and (min-width: 600px) {
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+    color: white;
+  }
+
+  .navbar-logo {
+    display: block;
+    padding: 0;
+  }
+
+  .navbar-menu {
+    position: relative;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  .navbar-menu-item a {
+    padding: 1em 1.5em;
+  }
+
+  .hero-title {
+    font-size: 1.8em;
+  }
+
+  #restaurants-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+
+  .restaurant-detail {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+  }
+
+  .card {
+    margin-top: 0;
+  }
+
+  .card-image {
+    min-height: 300px;
+  }
+
+  .cta a {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-image {
+    background-image: linear-gradient(
+        0deg,
+        rgba(5, 148, 103, 0.302) 0%,
+        rgba(16, 185, 129, 0) 100%
+      ),
+      url('/images/hero-image-large.jpg');
+  }
+
+  #restaurants-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .restaurant-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+
+  .hero-title {
+    font-size: 2.3em;
+  }
+
+  .cta a {
+    width: 35%;
+  }
+}
