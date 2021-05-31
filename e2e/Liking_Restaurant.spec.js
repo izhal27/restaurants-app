@@ -21,6 +21,8 @@ Scenario('liking one restaurant', async ({ I }) => {
   const firstRestaurantTitle = await I.grabTextFrom('.card-title');
   I.click(firstRestaurant);
 
+  I.scrollPageToTop();
+
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
@@ -41,12 +43,16 @@ Scenario('unliking one restaurant', async ({ I }) => {
   const firstRestaurant = locate('.restaurant-item').first();
   I.click(firstRestaurant);
 
+  I.scrollPageToTop();
+
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
   I.amOnPage('/#/favorites');
 
   I.click(firstRestaurant);
+
+  I.scrollPageToTop();
 
   I.seeElement('#likedButton');
   I.click('#likedButton');
