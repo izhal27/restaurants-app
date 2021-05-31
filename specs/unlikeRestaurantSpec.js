@@ -30,4 +30,13 @@ describe('Unliking A Restaurant', () => {
       document.querySelector('[aria-label="like this restaurant"]')
     ).toBeFalsy();
   });
+
+  it('should be able to unlike the restaurant', async () => {
+    await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
+
+    document.querySelector('#likedButton').dispatchEvent(new Event('click'));
+    const restaurant = await FavoritesIdb.getAllRestaurants();
+
+    expect(restaurant).toEqual([]);
+  });
 });
