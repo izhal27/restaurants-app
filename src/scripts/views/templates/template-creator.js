@@ -69,7 +69,7 @@ const createRestaurantItemTemplate = restaurant => `
         <source media="(max-width: 768px)" srcset="${API_ENDPOINT.IMAGE_MEDIUM(
           restaurant.pictureId
         )}">
-        <img src='${API_ENDPOINT.IMAGE_LARGE(
+        <img data-src='${API_ENDPOINT.IMAGE_LARGE(
           restaurant.pictureId
         )}' alt="restaurant-image" class="lazyload card-image roundborder"></img>
       </picture>
